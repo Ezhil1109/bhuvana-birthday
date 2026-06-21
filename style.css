@@ -1,0 +1,8 @@
+
+body{margin:0;font-family:Segoe UI,Arial;background:linear-gradient(135deg,#ffdbe8,#fff0f5);text-align:center;color:#333}
+.screen{display:none;min-height:100vh;padding:40px;box-sizing:border-box}
+.active{display:block}
+button,.music{background:#ff5f99;color:#fff;border:none;padding:12px 22px;border-radius:25px;text-decoration:none;display:inline-block;margin-top:15px}
+img{max-width:90%;max-height:60vh;border-radius:20px;box-shadow:0 8px 25px rgba(0,0,0,.2)}
+.letter{max-width:850px;margin:auto;line-height:1.9}
+input{padding:12px;border-radius:12px;border:1px solid #ccc}

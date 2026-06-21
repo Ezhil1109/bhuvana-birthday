@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bhuvana ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="hearts"></div>
+
+<section class="screen active" id="s1">
+<h1>❤️ For Bhuvana ❤️</h1>
+<p>A small journey through our love...</p>
+<p>11 September 🎂</p>
+<button onclick="next('s2')">Begin Our Story ✨</button>
+</section>
+
+<section class="screen" id="s2">
+<h2>🔐 Only My Bhuvana Can Enter</h2>
+<input id="pwd" placeholder="Password">
+<button onclick="checkPwd()">Enter ❤️</button>
+<p id="err"></p>
+</section>
+
+<section class="screen" id="s3">
+<h2>The Day The Most Beautiful Girl Came Into This World 🎂</h2>
+<p>Bhuvana ❤️</p>
+<button onclick="next('s4')">See Our Memories 📸</button>
+</section>
+
+<section class="screen" id="s4">
+<h2>📸 Our Story</h2>
+<img id="photo" src="images/everything_started_from_here.jpeg">
+<p id="cap">Every beautiful story has a beginning ❤️</p>
+<button onclick="next('s5')">Read My Letter 💌</button>
+</section>
+
+<section class="screen" id="s5">
+<div class="letter">
+<h2>💌 தொலைதூர காதல்...</h2>
+<div id="poem" class="love-letter"></div>
+<button onclick="next('s6')">Final Surprise 🎁</button>
+</div>
+</section>
+
+<section class="screen" id="s6">
+<h1>🎂 HAPPY BIRTHDAY BHUVANA 🎂</h1>
+<p>You are my favorite notification.<br>My favorite voice.<br>My favorite person.<br>And my forever ❤️</p>
+<p>Forever Yours,<br>Ezhilarasan 💕</p>
+<a class="music" target="_blank" href="https://open.spotify.com/search/Uyire%20Uyire%20Mental%20Manadhil">🎵 Play Our Song</a>
+</section>
+
+<script>
+const photos=['Ennavalum_nilavum.jpeg', 'WhatsApp Image 2026-06-21 at 16.21.35.jpeg', 'WhatsApp Image 2026-06-21 at 16.21.36 (1).jpeg', 'WhatsApp Image 2026-06-21 at 16.21.36 (2).jpeg', 'WhatsApp Image 2026-06-21 at 16.21.36.jpeg', 'WhatsApp Image 2026-06-21 at 16.21.37 (1).jpeg', 'WhatsApp Image 2026-06-21 at 16.21.37.jpeg', 'WhatsApp Image 2026-06-21 at 16.21.38.jpeg', 'WhatsApp Image 2026-06-21 at 16.21.39.jpeg', 'WhatsApp Image 2026-06-21 at 16.24.31.jpeg', 'WhatsApp Image 2026-06-21 at 16.24.35.jpeg', 'WhatsApp Image 2026-06-21 at 16.24.43.jpeg', 'WhatsApp Image 2026-06-21 at 16.24.52.jpeg', 'WhatsApp Image 2026-06-21 at 16.24.58.jpeg', 'WhatsApp Image 2026-06-21 at 16.25.03.jpeg', 'WhatsApp Image 2026-06-21 at 16.25.18.jpeg', 'azhagi.jpeg', 'everything_started_from_here.jpg', 'first_out.jpeg', 'love_acceptance_moment.jpeg', 'love_accepted_2026.jpeg', 'our_first_out_2026.jpeg', 'unakkaga.jpeg'];
+let i=0;
+setInterval(()=>{
+ if(document.getElementById('s4').classList.contains('active')){
+   i=(i+1)%photos.length;
+   document.getElementById('photo').src='images/'+photos[i];
+ }
+},2500);
+
+const poem = `
+📱☎️ <br><br>
+
+தொலைதூர காதல்... ❤️✨ <br><br>
+
+தொலைதூர காதல் செய்வதற்கு <br>
+மனதில் மன தைரிய விதை வேண்டும். 🌱❤️ <br><br>
+
+அது எல்லோருக்கும் கிடைக்காது. <br><br>
+
+தொலைதூர காதலை <br>
+காதல் தான் தேர்ந்தெடுக்கும் 💞 <br>
+காதலர்கள் தேர்ந்தெடுக்க முடியாது. <br><br>
+
+கிட்ட தட்ட இரண்டு வருடமாக, ⏳💕 <br>
+இரண்டு வருடமெல்லாம் <br>
+இரண்டு நிமிடங்கள் ஆகிவிடும் <br>
+அவளை நினைத்துக் கொண்டே இருந்தால். 💭❤️ <br><br>
+
+ஆனால் அதெல்லாம் கற்பனைக்கு தான் <br>
+நிஜத்தில் அல்ல. 🌙✨ <br><br>
+
+இரண்டு நிமிடத்தை கடப்பதே <br>
+இங்கு இமயமலை ஏறுவதற்கு சமம். 🏔️💔 <br><br>
+
+இப்படி இருக்கும் சூழலில் <br>
+என் இதயத்தை இதமாக்குவது <br>
+"வீடியோ" காலும் 📹❤️ <br>
+"நார்மல்" காலும் தான். ☎️💕 <br><br>
+
+நெருங்கி வர கண்கள் துடிக்கும் 👀💞 <br>
+இறுக அணைக்க கரங்கள் துடிக்கும் 🤗❤️ <br>
+முத்தமிட இதழ்கள் துடிக்கும் 😘💋 <br>
+ஆக மொத்தத்தில் <br>
+இதயத்தோடு சேர்ந்து <br>
+எல்லா உறுப்புகளும் <br>
+துடித்துக் கொண்டே இருக்கும். 💓✨ <br><br>
+
+நாட்களும் ஆமையாக நகர்கிறது 🐢💔 <br>
+வருடங்களும் ஆமையின் அப்பத்தா போல் நகர்கிறது. <br><br>
+
+இப்படி நகர்ந்து கொண்டால் <br>
+எங்கள் காதலுக்கு வயசாகி <br>
+ஆமையின் ஆயுட்காலத்தை விட <br>
+நீண்ட காலம் இருக்கும். ⏳❤️ <br><br>
+
+காதல் செய்தோமே <br>
+ஆனால் காதல் தான் <br>
+எங்களை நான்கு வருடம் செய்தது. 💞🥺 <br><br>
+
+தொலைதூர காதலின் சிறப்பே பொறுமை தான். 🌹❤️ <br><br>
+
+அந்த பொறுமையில் தான் <br>
+எங்கள் காதல் பொறாமை <br>
+கொள்ளாமல் வாழ்கிறது. 💕✨ <br><br>
+
+தொலைதூர காதல் <br>
+என்றைக்கும் <br>
+தொலையாத "காதல்". ❤️♾️ <br><br>
+
+🎂❤️ இனிய பிறந்தநாள் வாழ்த்துக்கள் என் உயிரே ❤️🎂 <br><br>
+
+நீ என் வாழ்க்கையில் வந்தது <br>
+என் வாழ்வின் மிக அழகான பரிசு. 🎁💖 <br><br>
+
+ஒவ்வொரு நாளும் <br>
+நீ என் அருகில் இல்லாவிட்டாலும், <br>
+என் இதயத்தில் நீயே இருக்கிறாய். ❤️ <br><br>
+
+❤️ Happy Birthday Bhuvana ❤️ <br><br>
+
+Forever Yours, <br>
+ Ezhilarasan K 💕
+`;
+
+function next(id){
+ document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+
+ if(id==='s5'){
+    document.getElementById('poem').innerHTML = poem;
+ }
+}
+
+function checkPwd(){
+ if(document.getElementById('pwd').value.toLowerCase()==='kulfi') next('s3');
+ else document.getElementById('err').innerText='Wrong Password ❤️';
+}
+</script>
+</body>
+</html>
